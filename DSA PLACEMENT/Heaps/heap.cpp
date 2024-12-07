@@ -136,6 +136,8 @@ int main()
     cout << "heapify kar raha from array input" << endl;
     int array[6] = {-1, 54, 53, 55, 52, 50};
     int n = sizeof(array) / sizeof(array[0]);
+
+    //heapify wala function
     for (int i = (n / 2); i > 0; i--) // sare leaf nodes ko chor k check kar raha heap hai ki nahi
     {
         heapify(array, n, i);
