@@ -19,14 +19,14 @@ bool issafe(int row, int col, vector<vector<int>> &board, int n)
     // check for same row
     while (y >= 0)
     {
-        if (board[x][y] == 1)
+        if (board[x][y] == 1) // batata hai kya mera queen hai?1=yes.matlab is x aur y pe queen hai..pehla 0,0 mai daal diya 1,,abhi 0,1 pe ayega abhi ye 0,1 tab tak process hoga jab tak ye false nahi ho jata is loop k liye..phir ye 0,1 wapis se neeche k loops k liye jaayega
         {
-            return false;
+            return false; // is position mai dalna risky hai kyuki already 1 quuen hai
         }
         y--;
     }
     // for upper diagonal
-    x = row;
+    x = row; // upar waale specific row and column k baad
     y = col;
     while (x >= 0 && y >= 0) // x aur y mere deebe k bahar nahi jana chahiye(starting)
     {
@@ -74,7 +74,7 @@ void solve(int col, vector<vector<int>> &ans, vector<vector<int>> &board, int n)
 }
 vector<vector<int>> nqueens(int n) // kitne queen ko leke kaam karna hai
 {
-    vector<vector<int>> board(n, vector<int>(n, 0)); // board banaya->n rows ka and n colums ka jiske value saare zero hai(row,col)
+    vector<vector<int>> board(n, vector<int>(n, 0)); // board banaya->n rows ka and n colums ka jiske value saare zero hai(row,col)...full 0 sab jagah
     vector<vector<int>> ans;
     solve(0, ans, board, n); // 0th column se start kar raha mai,ans bhej raha ,board bhej raha aur kitne queen hai
     return ans;
