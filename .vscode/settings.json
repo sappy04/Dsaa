@@ -5,6 +5,10 @@
         "iostream": "cpp",
         "ostream": "cpp",
         "random": "cpp",
-        "new": "cpp"
+        "new": "cpp",
+        "vector": "cpp",
+        "unordered_map": "cpp",
+        "deque": "cpp",
+        "string": "cpp"
     }
 }

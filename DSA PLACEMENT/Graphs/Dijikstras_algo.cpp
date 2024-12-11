@@ -35,10 +35,10 @@ vector<int> dijikstras(vector<vector<int>> &vec, int vertex, int edge, int src) 
         {
             if (nodedis + neigh.second < dist[neigh.first]) // jis node pe hoon uska weight +dusre node[neigh.second] k beech ka weight agar mere predefined node[dist[node.first]] k dist se kam hai
             {
-                auto record = st.find(make_pair(dist[neigh.first], neigh.first)); //-?matlab?
-                if (record != st.end())
+                auto record = st.find(make_pair(dist[neigh.first], neigh.first)); //jis node pe abhi hoon uska node ka details find karo set mai se
+                if (record != st.end())//search till end
                 {
-                    st.erase(record);
+                    st.erase(record);//mil gaya hata k update kardo by inserting at top
                 }
 
                 // min distance ko update karo
