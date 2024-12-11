@@ -6,7 +6,7 @@ void sort012(int arr[], int n)
     int low = 0, mid = 0, high = n - 1;
 
     // Process the array using three pointers
-    while (mid <= high)
+    while (mid <= high)//important
     {
         if (arr[mid] == 0)
         {
